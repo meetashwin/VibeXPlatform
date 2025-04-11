@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Robot Avatar 1</title>
+    <g id="Robot-Avatar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Background" fill="#3B82F6" cx="100" cy="100" r="100"></circle>
+        <g id="Robot-Head" transform="translate(35.000000, 30.000000)">
+            <rect id="Head" stroke="#000000" stroke-width="4" fill="#FFFFFF" x="2" y="2" width="126" height="116" rx="20"></rect>
+            <rect id="Antenna-Base" stroke="#000000" stroke-width="3" fill="#DDDDDD" x="60.5" y="-12.5" width="10" height="15" rx="2"></rect>
+            <circle id="Antenna-Top" stroke="#000000" stroke-width="3" fill="#FF4D4D" cx="65.5" cy="-20.5" r="8"></circle>
+            <g id="Eyes" transform="translate(30.000000, 30.000000)">
+                <circle id="Left-Eye" stroke="#000000" stroke-width="3" fill="#000000" cx="15" cy="15" r="15"></circle>
+                <circle id="Right-Eye" stroke="#000000" stroke-width="3" fill="#000000" cx="70" cy="15" r="15"></circle>
+                <circle id="Left-Pupil" fill="#4CAF50" cx="15" cy="15" r="5"></circle>
+                <circle id="Right-Pupil" fill="#4CAF50" cx="70" cy="15" r="5"></circle>
+                <path d="M10,5 C12.7614237,5 15,7.23857625 15,10 C15,12.7614237 12.7614237,15 10,15 C7.23857625,15 5,12.7614237 5,10 C5,7.23857625 7.23857625,5 10,5 Z" id="Left-Highlight" fill="#FFFFFF"></path>
+                <path d="M65,5 C67.7614237,5 70,7.23857625 70,10 C70,12.7614237 67.7614237,15 65,15 C62.2385763,15 60,12.7614237 60,10 C60,7.23857625 62.2385763,5 65,5 Z" id="Right-Highlight" fill="#FFFFFF"></path>
+            </g>
+            <path d="M42.5,80 C42.5,80 50.8350951,95 65.5,95 C80.1649049,95 88.5,80 88.5,80" id="Mouth" stroke="#000000" stroke-width="4" stroke-linecap="round" fill="#FFFFFF"></path>
+            <rect id="Control-Panel" stroke="#000000" stroke-width="3" fill="#F0F0F0" x="37.5" y="100.5" width="55" height="10" rx="2"></rect>
+            <circle id="Button-1" stroke="#000000" stroke-width="2" fill="#4CAF50" cx="45.5" cy="105.5" r="3"></circle>
+            <circle id="Button-2" stroke="#000000" stroke-width="2" fill="#FFC107" cx="55.5" cy="105.5" r="3"></circle>
+            <circle id="Button-3" stroke="#000000" stroke-width="2" fill="#F44336" cx="65.5" cy="105.5" r="3"></circle>
+            <rect id="Display" stroke="#000000" stroke-width="2" fill="#333333" x="73.5" y="103.5" width="15" height="4" rx="1"></rect>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Robot Avatar 3</title>
+    <g id="Robot-Avatar-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Background" fill="#10B981" cx="100" cy="100" r="100"></circle>
+        <g id="Robot-Head" transform="translate(40.000000, 35.000000)">
+            <path d="M10,0 L110,0 C115.522847,-1.01453063e-15 120,4.4771525 120,10 L120,100 C120,110.45695 111.45695,119 101,119 L19,119 C8.5430495,119 1.2952191e-15,110.45695 0,100 L0,10 C-6.76353751e-16,4.4771525 4.4771525,1.01453063e-15 10,0 Z" id="Head" stroke="#000000" stroke-width="4" fill="#9C27B0"></path>
+            <circle id="Antenna-Top" stroke="#000000" stroke-width="3" fill="#8BC34A" cx="60" cy="-15" r="10"></circle>
+            <rect id="Visor" stroke="#000000" stroke-width="3" fill="#FFD700" x="15" y="25" width="90" height="30" rx="5"></rect>
+            <g id="Eyes" transform="translate(27.000000, 30.000000)">
+                <circle id="Left-Eye" fill="#000000" cx="12.5" cy="10" r="7.5"></circle>
+                <circle id="Right-Eye" fill="#000000" cx="52.5" cy="10" r="7.5"></circle>
+                <rect id="Scanner" stroke="#000000" stroke-width="2" fill="#333333" x="25" y="7.5" width="15" height="5" rx="2.5"></rect>
+                <circle id="Scanner-Light" fill="#FF0000" cx="32.5" cy="10" r="2.5"></circle>
+            </g>
+            <path d="M40,75 L80,75 C82.7614237,75 85,77.2385763 85,80 L85,85 C85,87.7614237 82.7614237,90 80,90 L40,90 C37.2385763,90 35,87.7614237 35,85 L35,80 C35,77.2385763 37.2385763,75 40,75 Z" id="Mouth-Base" stroke="#000000" stroke-width="3" fill="#DDDDDD"></path>
+            <path d="M45,80 L75,80 C76.1045695,80 77,80.8954305 77,82 C77,83.1045695 76.1045695,84 75,84 L45,84 C43.8954305,84 43,83.1045695 43,82 C43,80.8954305 43.8954305,80 45,80 Z" id="Mouth" stroke="#000000" stroke-width="1" fill="#333333"></path>
+            <g id="Indicator-Lights" transform="translate(25.000000, 105.000000)" stroke="#000000" stroke-width="2">
+                <circle fill="#FF5722" cx="10" cy="5" r="5"></circle>
+                <circle fill="#03A9F4" cx="35" cy="5" r="5"></circle>
+                <circle fill="#8BC34A" cx="60" cy="5" r="5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,119 @@
+On the target app, you need to add a middleware that checks for the presence and validity of the JWT token before allowing access to any page.
+
+Here's a simple implementation to add to your target app (https://vibe-x-ravipal9.replit.app/):
+
+// authMiddleware.js
+const jwt = require('jsonwebtoken');
+const JWT_SECRET = process.env.JWT_SECRET || "your-secret-key-for-jwt-signing"; // Must match your main app
+function verifyAuthToken(token) {
+  try {
+    return jwt.verify(token, JWT_SECRET);
+  } catch (error) {
+    console.error("Token verification error:", error);
+    return null;
+  }
+}
+// Middleware to protect routes
+function requireAuth(req, res, next) {
+  // Check for token in query params (for initial redirect)
+  const queryToken = req.query.authToken;
+  
+  // Check for token in cookies (for subsequent requests)
+  const cookieToken = req.cookies && req.cookies.authToken;
+  
+  // Use query token or cookie token
+  const token = queryToken || cookieToken;
+  
+  if (!token) {
+    // No token found - redirect to main app login
+    return res.redirect('https://your-main-app-url/auth');
+  }
+  
+  // Verify token
+  const decoded = verifyAuthToken(token);
+  
+  if (!decoded) {
+    // Invalid token - redirect to main app login
+    return res.redirect('https://your-main-app-url/auth');
+  }
+  
+  // Store user info for the request
+  req.user = decoded;
+  
+  // If token was in query params, set as cookie for future requests
+  if (queryToken && !cookieToken) {
+    res.cookie('authToken', queryToken, { 
+      httpOnly: true, 
+      maxAge: 3600000, // 1 hour
+      sameSite: 'lax'
+    });
+  }
+  
+  next();
+}
+module.exports = { requireAuth };
+Then in your target app's main server file (usually index.js or app.js), use the middleware:
+const express = require('express');
+const app = express();
+const cookieParser = require('cookie-parser');
+const { requireAuth } = require('./authMiddleware');
+app.use(cookieParser());
+// Public routes that don't need auth
+app.use('/public', express.static('public'));
+// Protect all other routes
+app.use(['/documentation', '/api', '/dashboard'], requireAuth);
+// Or protect everything except specific public routes
+app.use((req, res, next) => {
+  if (req.path === '/public' || req.path === '/health-check') {
+    return next();
+  }
+  requireAuth(req, res, next);
+});
+// Your routes here...
+Important details:
+
+Ensure both apps use the same JWT_SECRET (either hardcoded or from environment variables)
+Set appropriate cookie settings for security
+Make sure the redirect URL in the middleware points back to your main app's login page
+For a completely secure implementation, you should verify the token with your main app's API on every request, rather than just verifying the token locally. This way, if a user is logged out of the main app, they will also be logged out of the target app:
+
+// Enhanced version - verify token with main app on each request
+async function requireAuth(req, res, next) {
+  const token = req.query.authToken || (req.cookies && req.cookies.authToken);
+  
+  if (!token) {
+    return res.redirect('https://your-main-app-url/auth');
+  }
+  
+  try {
+    // Verify token with main app's API
+    const response = await fetch('https://your-main-app-url/api/auth/verify-token', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ token })
+    });
+    
+    const result = await response.json();
+    
+    if (!result.valid) {
+      throw new Error('Invalid token');
+    }
+    
+    req.user = result.user;
+    
+    if (req.query.authToken && !req.cookies?.authToken) {
+      res.cookie('authToken', req.query.authToken, { 
+        httpOnly: true, 
+        maxAge: 3600000, 
+        sameSite: 'lax'
+      });
+    }
+    
+    next();
+  } catch (error) {
+    console.error('Auth error:', error);
+    return res.redirect('https://your-main-app-url/auth');
+  }
+}

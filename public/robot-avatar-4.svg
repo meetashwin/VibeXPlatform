@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Robot Avatar 4</title>
+    <g id="Robot-Avatar-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Background" fill="#EC4899" cx="100" cy="100" r="100"></circle>
+        <g id="Robot-Head" transform="translate(40.000000, 30.000000)">
+            <path d="M20,0 L100,0 C111.045695,-2.29261966e-15 120,8.9543045 120,20 L120,110 C120,121.045695 111.045695,130 100,130 L20,130 C8.9543045,130 1.35525272e-15,121.045695 0,110 L0,20 C-1.3527075e-15,8.9543045 8.9543045,2.02906125e-15 20,0 Z" id="Head" stroke="#000000" stroke-width="4" fill="#F5F5F5"></path>
+            <path d="M30,0 L30,0 L30,15 C30,17.7614237 27.7614237,20 25,20 L10,20 C7.23857625,20 5,17.7614237 5,15 L5,0 L5,0" id="Left-Ear" stroke="#000000" stroke-width="3" fill="#FF9800" transform="translate(17.500000, 10.000000) rotate(180.000000) translate(-17.500000, -10.000000) "></path>
+            <path d="M115,0 L115,0 L115,15 C115,17.7614237 112.761424,20 110,20 L95,20 C92.2385763,20 90,17.7614237 90,15 L90,0 L90,0" id="Right-Ear" stroke="#000000" stroke-width="3" fill="#FF9800" transform="translate(102.500000, 10.000000) rotate(180.000000) translate(-102.500000, -10.000000) "></path>
+            <g id="Eyes" transform="translate(20.000000, 40.000000)">
+                <circle id="Left-Eye-Socket" stroke="#000000" stroke-width="3" fill="#EEEEEE" cx="20" cy="20" r="20"></circle>
+                <circle id="Right-Eye-Socket" stroke="#000000" stroke-width="3" fill="#EEEEEE" cx="80" cy="20" r="20"></circle>
+                <circle id="Left-Eye" fill="#000000" cx="20" cy="25" r="8"></circle>
+                <circle id="Right-Eye" fill="#000000" cx="80" cy="25" r="8"></circle>
+                <path d="M25,10 C30,15 30,25 20,25" id="Left-Eyebrow" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M75,10 C70,15 70,25 80,25" id="Right-Eyebrow" stroke="#000000" stroke-width="2" stroke-linecap="round" transform="translate(75.000000, 17.500000) scale(-1, 1) translate(-75.000000, -17.500000) "></path>
+                <circle id="Left-Highlight" fill="#FFFFFF" cx="17" cy="22" r="3"></circle>
+                <circle id="Right-Highlight" fill="#FFFFFF" cx="77" cy="22" r="3"></circle>
+            </g>
+            <rect id="Mouth-Base" stroke="#000000" stroke-width="3" fill="#DDDDDD" x="40" y="85" width="40" height="20" rx="5"></rect>
+            <path d="M45,95 C45,95 55,105 60,105 C65,105 75,95 75,95" id="Mouth" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+            <g id="Antennas" transform="translate(42.000000, -25.000000)">
+                <path d="M0,25 C0,25 5,5 18,5" id="Left-Antenna" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M36,25 C36,25 31,5 18,5" id="Right-Antenna" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                <circle id="Antenna-Ball" stroke="#000000" stroke-width="2" fill="#FF4081" cx="18" cy="5" r="5"></circle>
+            </g>
+            <g id="Control-Panel" transform="translate(30.000000, 115.000000)">
+                <rect id="Panel" stroke="#000000" stroke-width="2" fill="#EEEEEE" x="0" y="0" width="60" height="10" rx="2"></rect>
+                <circle id="Light-1" fill="#4CAF50" cx="10" cy="5" r="3"></circle>
+                <circle id="Light-2" fill="#FFC107" cx="20" cy="5" r="3"></circle>
+                <circle id="Light-3" fill="#F44336" cx="30" cy="5" r="3"></circle>
+                <line x1="40" y1="2" x2="55" y2="2" id="Line-1" stroke="#000000" stroke-width="1" stroke-linecap="round"></line>
+                <line x1="40" y1="5" x2="55" y2="5" id="Line-2" stroke="#000000" stroke-width="1" stroke-linecap="round"></line>
+                <line x1="40" y1="8" x2="55" y2="8" id="Line-3" stroke="#000000" stroke-width="1" stroke-linecap="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>
